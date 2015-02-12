@@ -218,45 +218,68 @@
           <h2>Desarrollo</h2>
         </div>
       </header>
+
       <article class="col-12-12">
-        <p>Como desarrollador front-end, <strong>tu principal responsabilidad es la de implementar la interfaz final sobre la cual van a interactuar los usuarios.</strong> Esto no es simplemente traducir un PSD a HTML y CSS, sino que es pulir la interacción con el usuario y establecer los criterios necesarios para que la UX sea lo mejor posible, creando todo desde las adaptaciones responsive hasta esos pequeños detalles (como swipes en mobile, animaciones sutiles y muy buena performance) que hacen que una interfaz pase de muy buena a excelente.</p>
-        <p>Para esto tomamos en cuenta nuestro punto de partida, que es la etapa de wireframing y diseño. En lo posible, <strong>es conveniente que te involucres con el diseñador para asegurarte de que todo puede ser llevado a cabo correctamente</strong> (sin hacks berretas y/o de pobre performance), al igual que poder chequear el costado técnico del proyecto para marcar las cosas que hay que tener en cuenta.</p>
+        <p>Como desarrollador front-end, <strong>tu principal responsabilidad es la de implementar la interfaz final sobre la cual van a interactuar los usuarios.</strong> Esto no es simplemente traducir un PSD a HTML y CSS, sino que es pulir la interacción con el usuario y establecer los criterios necesarios para que la UX sea lo mejor posible, creando todo desde las adaptaciones responsive hasta esos pequeños detalles (como animaciones sutiles y una excelente performance) que hacen que una interfaz pase de muy buena a excelente.</p>
+
+        <p>Para esto tomamos en cuenta nuestro punto de partida, que es la etapa de wireframing y diseño. En lo posible, <strong>es conveniente que te involucres temprano en el proyecto para asegurarte de que el diseño de UI/UX puede ser llevado a cabo correctamente</strong>, al igual que poder chequear el costado técnico del proyecto para marcar las cosas que hay que tener en cuenta antes de comenzar con la implementación.</p>
+
         <blockquote>...esos pequeños detalles hacen que una interfaz pase de muy buena a excelente.</blockquote>
+
         <p>Cuando termina esta etapa de diseño, ahí sí es necesario crear un pequeño documento que establezca los detalles a tener en cuenta sobre la implementación:</p>
         <ul>
-          <li>¿Cuál es el target de browsers y dispositivos? ¿Qué versiones de IE hay que tener en cuenta? Verificá esto con las especificaciones del trabajo.</li>
-          <li>¿Cómo son los :hover, :active y animaciones del site?</li>
+          <li>¿Cuál es el target de browsers y dispositivos? Verificá esto con las especificaciones del trabajo.</li>
+          <li>¿Cómo son los :hover, :active y animaciones del site? Trabajá codo a codo con los diseñadores para llegar al mejor resultado posible.</li>
           <li>¿Hay componentes que tengan un funcionamiento particular? (Headers fixed, fondos con parallax, transiciones de elementos).</li>
-          <li>¿Cómo es el layout del sitio? ¿Es necesario crear una adaptación responsive? </li>
-          <li>¿Cuánta libertad hay para modificar el diseño? Esto es importante en sitios donde se espera una representación pixel-perfect del diseño, por más complejo que sea. Si este es el caso, y hay que hacer un cambio, asegurate de pedirle autorización al <strong>Project Manager</strong> para que no haya un malentendido después.</li>
-          <li>¿Qué va a hacer el cliente con esta implementación? ¿Es conveniente crear una estructura que después permita adaptarla a otro display o sólo basta con hacer una versión desktop / mobile?</li>
+          <li>¿Cuánta libertad hay para modificar el diseño? Esto es importante en sitios donde se espera una representación pixel-perfect del diseño, por más complejo que sea. Si este es el caso, y hay que hacer un cambio, asegurate de comunicárselo al <strong>Project Manager</strong> para que no haya malentendidos.</li>
+          <li>¿Qué va a hacer el cliente con esta implementación? ¿Es conveniente crear una estructura que después permita adaptarla a otra app/plataforma?</li>
           <li>¿Esto va sobre un framework (CodeIgniter, Laravel, Symfony, Rails, Django, etc) o sólo hay que entregar el HTML? Es conveniente en lo posible trabajar sobre la implementación final, ya que aceleramos el trabajo de integración.</li>
           <li>¿Hay algún requerimiento en lo que refiere a tecnologías? Por ejemplo, usar Angular, alguna versión de jQuery en particular, evitar elementos de HTML5, entre otras. Documentalas apropiadamente para que se conozcan las restricciones del proyecto.</li>
           <li>¿Cómo va a ser la integración final con el producto? ¿Quién se encarga de los merges y subida a producción?</li>
           <li>¿Hay algún estándar de código que haya que seguir?</li>
-          <li>¿Cómo hacemos para avisar que un entregable está listo? Si tenemos un repositorio compartido con el cliente es posible que haya malentendidos de cuáles cosas están listas y cuáles no. Establecé apenas empiece el proyecto una metodología para avisar (cerrando tickets en <a href="#">Basecamp</a> con un comentario que notifique al cliente, por ejemplo) para saber qué cosas se pueden dar por hechas. Recordá siempre la revisión final antes de confirmar un entregable.
-          </li>
+          <li>¿Cómo hacemos para avisar que un entregable está listo? Si tenemos un repositorio compartido con el cliente es posible que haya malentendidos de cuáles cosas están listas y cuáles no. Establecé apenas empiece el proyecto una metodología para avisar (cerrando tickets en <a href="https://basecamp.com">Basecamp</a> con un comentario que notifique al cliente, por ejemplo) para saber qué cosas se pueden dar por hechas. Recordá siempre la revisión final antes de confirmar un entregable.</li>
         </ul>
 
-        <p class="note">Además de esto, van las consideraciones que tomamos para todo proyecto.</p>
-        <h5>Usá los estándares de código de Aerolab</h5>
-        <p>A grandes rasgos son UTF-8 para todo, tabulado con 2 espacios, HTML5 prolijo, Normalize como reset y SASS siempre que se pueda con una pequeña orientación a OOCSS. Tratá de que el código sea modular en lo posible.</p>
-        <h5>Siempre trabajá con un repositorio</h5> 
-        <p>Tenés la posibilidad de crear repositorios propios (bajo el team Aerolab) en <a href="#">BitBucket</a>. Creá uno (o sumate al existente) al comenzar cada proyecto y hacé commits + push frecuentemente, ya que no sólo sirven de backup, sino que permiten que uno pueda chequear las cosas rápidamente.</p>
-        <h5>No hagas grasadas</h5>
-        <p>Nuestra primer preocupación para cualquier implementación es performance. Si tenés que usar varios polyfills, filtros lentos o plugins/componentes que arruinan el rendimiento de la interfaz (crear layouts o scrollbars por JS, por ejemplo) probablemente termines con una implementación que no anda del todo bien. Si viene de parte del cliente el pedido, da tu opinión al respecto y en todo caso pedí que alguien más del team te respalde cuando presentes tu opinión para evitar terminar con un producto final que no rinde bien.</p>
-        <h5>Sé prolijo</h5>
-        <p>Separá el SASS y JS en archivos que se encarguen de módulos específicos para evitar quedar con cosas monolíticas. Lo mismo va para el HTML (usá PHP para separarlo en componentes parciales como header/footer para evitar problemas de consistencia). Si tenés que copiar y pegar código, asegurate que las clases y comentarios sean consistentes con el estilo del proyecto.</p>
-        <h5>Comentá las cosas "raras"</h5>
-        <p>Uno siempre termina usando un hack para resolver alguna issue de compatibilidad. Si usás uno de estos (ya sea en CSS o JS), dejá un mínimo comentario explicando por qué se terminó usando eso para que la solución tenga un contexto.</p>
+        
 
-        <p class="note">Por ende, llegamos a la lista de cosas que conviene hacer como parte del proyecto:</p>
+        <h3>Nuestras reglas principales</h3>
+
+        <h5>Performance es una feature</h5>
+        <p><strong>Queremos 60FPS</strong>. Esto es nuestra guideline principal a cumplir en nuestros dispositivos de referencia. Si tenés que usar varios polyfills, filtros lentos o plugins/componentes que arruinan el rendimiento de la interfaz (reflows excesivos, no aprovechar el GPU, etc) probablemente termines con una implementación lamentable.</p>
+        <p>La única excepción que podemos tener a esta regla es si existe un <strong>motivo artístico</strong> lo suficientemente importante como para reducir nuestro target a 30FPS. Por ejemplo, el sitio de <a href="https://www.jsconfar.com" target="_blank">JSConf 2014</a> o el de <a href="http://xapo.com/" target="_blank">Xapo</a> notarás que sacrifican performance en pos de conseguir un resultado visual impactante.</p>
+
+        <h5>Prolijidad ante todo</h5>
+        <p>Nuestras guidelines son muy simples: Usamos UTF-8 para todo, tabulado con 2 espacios, y casi siempre tomamos como base una recipe de yeoman (webapp es de las más populares internamente). Trabajamos en inglés a menos que haya una excepción para el proyecto (como este manual :P).</p>
+        <p>Tratá de que el código sea claro y modular, usando bower para dependencias y aprovechando SASS y partials para dividir el código en módulos lógicos. Como regla general no te repitas, y asumí que quien va a trabajar con vos en el proyecto es un asesino serial que sabe dónde vivís.</p>
+
+        <h5>Show and Tell</h5>
+        <p>Usamos <strong>Pull Requests</strong> para hacer una <strong>revisión de código antes de dar por finalizada una feature</strong>. De esta forma damos lugar a que nuestros compañeros de equipo puedan asegurar que se están cumpliendo nuestros estándares de calidad, al igual que nos otorga un segundo punto de vista para detectar problemas con el código.</p>
+        <p>Asimismo, en features complejas es conveniente que todos se sumen para testear y dar insights valiosos, los cuales pueden discutirse y corregirse antes de terminar cada objetivo.</p>
+
+        <h5>Test, Test, Test</h5>
+        <p>Chrome no es el único browser que existe. Desde el costado visual, nuestros estándares de compatibilidad son muy simples y sólo lleva unos minutos verificar que el funcionamiento de una interfaz es apto para la mayoría de los usuarios. A medida que aumenta la complejidad del proyecto, es recomendable incorporar unit tests y visual regression tests. Los tests no son tanto para ver si lo que acabás de terminar está bien. Es para enterarte si lo rompiste después.</p>
+        <p><strong>Testeá siempre antes de enviar un entregable</strong>. De lo contrario te las vas a ver con un Project Manager iracundo.</p>
+
+        <p>En desktop, como política general <strong>soportamos las dos últimas versiones estables</strong> de los browsers principales (Chrome, Firefox, IE, Safari). Asimismo, todos nuestros sites son <strong>responsive con soporte mobile</strong> por defecto. Nuestra computadora de referencia es un Core i3 con 8GB de RAM y un GPU integrado (esencialmente una Macbook/Notebook/PC de gama media).</p>
+        <p>En mobile, dada la mayor variación y disponibilidad de hardware, tomamos como base los dispositivos de referencia de iOS y Android, que son los <strong>iPhone y Nexus disponibles comercialmente durante los últimos 12 meses</strong>, incluyendo sus sistemas operativos. Esto significa actualmente iPhone 5/6/6Plus (iOS 7 y 8) y Nexus 5/6 (Android 4.4 y 5).</p>
+        <p>Estos estándares son una guía general y <strong>deben evaluarse por proyecto</strong> para garantizar un excelente resultado final. Analizá las características del sitio en la etapa de análisis para no tomar una decisión dogmática -y seguramente incorrecta-. Recordá que no podemos ofrecer una excelente UX si la mayoría de usuarios no puede usar el sitio/app.</p>
+
+
+
+        <p class="note">Además de esto, van las consideraciones que tomamos para todo proyecto.</p>
+
+        <h5>Siempre trabajá con un repositorio</h5> 
+        <p>Tenés la posibilidad de crear repositorios propios (bajo el team Aerolab) en <a href="https://bitbucket.org">BitBucket</a>. Creá uno (o sumate al existente) al comenzar cada proyecto y hacé commits + push frecuentemente, ya que no sólo sirven de backup, sino que tienen tooling que utilizamos con mucha frecuencia.</p>
+        <p>Usá nuestro sistema de deployment automático siempre que puedas, que te va a permitir mostrar en qué venís trabajando en un branch específico, sin necesidad de pelearte con SSH o FTP.</p>
+
+        <h5>Usá Git Flow</h5>
+        <p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">Git Flow</a> es una metodología que nos permite trabajar con mayor comodidad en un repositorio. Dale una leída al documento, pero lo que tenés que saber es lo siguiente: Usá siempre branches para nuevas features y fixes (feature/redesign), los cuales se mergean a dev para testearlos y recién una vez testeados los mandamos a master.</p>
+
+        <h5>Comentá las cosas "raras"</h5>
+        <p>Uno siempre termina usando un hack para resolver alguna issue de compatibilidad, o bien termina implementando una feature compleja de corrido sin escribir un sólo comment. Dejá un comentario explicando brevemente la solución o el porqué de la misma para evitar traumas futuros. Si no lo hacés, seguramente te des cuenta de que el código que escribiste es confuso en el momento de la code review.</p>
 
         <h5>Documentá todas las especificaciones</h5>
-        <p>Esto viene del primer punto y consiste en responder todas esas preguntas (y las que surjan aparte) documentadas en un Text Document en <a href="#">Basecamp</a>. Tenelo como referencia ante cualquier duda y si hay una consulta, efectuala por <a href="#">Basecamp</a> (con copia al <strong>Project Manager</strong> / <strong>CTO</strong> / <strong>Lead Developer</strong>) para que quede guardada tanto la pregunta como la respuesta del cliente.</p>
-
-        <h5>Seguí buenas prácticas de código</h5>
-        <p>Básicamente, sé prolijo y no hagas grasadas salvo que tengas un muy buen motivo (y si lo hacés, comentalo apropiadamente para que se entienda durante la intervención). Recordá que <strong>nuestro idioma oficial es el inglés</strong>, así que seguí esa guideline salvo que se indique lo contrario en el brief.</p>
+        <p>Esto viene del primer punto y consiste en responder todas esas preguntas (y las que surjan aparte) documentadas en un Text Document en <a href="https://basecamp.com">Basecamp</a>. Tenelo como referencia ante cualquier duda y si hay una consulta, efectuala por <a href="https://basecamp.com">Basecamp</a> (con copia al <strong>Project Manager</strong> / <strong>CTO</strong> / <strong>Lead Developer</strong>) para que quede guardada tanto la pregunta como la respuesta del cliente.</p>
 
         <h5>Evitá las entregas parciales</h5>
         <p>Usualmente los clientes asumen que lo que obtienen es una representación clara del trabajo final, y entregar cosas a medias no queda bien (termina en listas interminables de feedback que se responden con “todavía no está hecho”). Sólo entregá cosas finales y aprobadas, y si tenés que hacer una entrega parcial de todos modos, definí con mucha precisión qué cosas están listas para que sólo se evalúe eso.</p>
@@ -264,17 +287,6 @@
         <h5>Pedí la opinión de otro dev</h5>
         <p>A uno siempre se le escapan cosas o termina haciendo cosas por impulso. Siempre está bueno consultar con otra persona cada tanto para que le pegue un vistazo al trabajo a medida que va avanzando. Es algo que sólo lleva unos minutos y eleva notablemente la calidad del trabajo final, ya que terminás tomando experiencia prestada de alguien que por ahí ya se topó con el mismo problema antes.</p>
 
-        <h5>Usá Git Flow</h5>
-        <p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">Git Flow</a> es una metodología que nos permite trabajar con mayor comodidad en un repositorio. Dale una leída al documento, pero lo que tenés que saber es lo siguiente: Usá siempre branches para nuevas features y fixes (feature/redesign), los cuales se mergean a dev para testearlos y recién una vez testeados los mandamos a master.</p>
-
-        <h5>Pull Requests are your friend</h5>
-        <p>Usamos Pull Requests para pedir una <strong>revisión de código antes de dar por finalizada una feature</strong>. De esta forma damos lugar a que el tech lead del proyecto pueda asegurar que se están cumpliendo nuestros estándares de calidad, al igual que nos otorga un segundo punto de vista para detectar problemas con el código.</p>
-        <p>Asimismo, en features complejas es conveniente que el resto del equipo se sume para testear y dar insights valiosos, los cuales pueden discutirse y corregirse antes de terminar cada objetivo.</p>
-
-        <h5>Navegadores y Sistemas Operativos Soportados</h5>
-        <p>En desktop, como política general <strong>soportamos las dos últimas versiones estables</strong> de los browsers principales (Chrome, Firefox, IE, Safari). Asimismo, todos nuestros sites son <strong>responsive con soporte mobile</strong> por defecto.</p>
-        <p>En mobile, dada la mayor variación y disponibilidad de hardware, tomamos como base los dispositivos de referencia de iOS y Android, que son los <strong>iPhone y Nexus disponibles comercialmente durante los últimos 12 meses</strong>, incluyendo sus sistemas operativos. Esto significa iPhone 5/6/6Plus (iOS 7 y 8) y Nexus 5/6 (Android 4.4 y 5).</p>
-        <p>Estos estándares son una guía general y deben evaluarse por proyecto para garantizar un excelente resultado final. Recordá que no podemos ofrecer una excelente UX si la mayoría de usuarios no puede usar el sitio/app.</p>
       </article>
     </section>
 
