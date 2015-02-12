@@ -113,7 +113,7 @@
   </div>
 
   <div id="content">
-  	<section id="nosotros">
+    <section id="nosotros">
       <header>
         <div class="flex col-12-12">
           <div class="bg"></div>
@@ -130,20 +130,20 @@
     </section>
 
     <section id="guia">
-  		<header>
-  			<div class="flex col-12-12">
+      <header>
+        <div class="flex col-12-12">
           <div class="bg"></div>
-  				<h2>Acerca <br>de la Guía</h2>
-  			</div>
-  		</header>
-  		<article class="col-12-12">
-  			<p>Como en cualquier flujo de trabajo, todas y cada una de las partes involucradas en los diferentes procesos son fundamentales y, por ende, la falla de alguna de ellas tiene un impacto directo en el resto.</p>
+          <h2>Acerca <br>de la Guía</h2>
+        </div>
+      </header>
+      <article class="col-12-12">
+        <p>Como en cualquier flujo de trabajo, todas y cada una de las partes involucradas en los diferentes procesos son fundamentales y, por ende, la falla de alguna de ellas tiene un impacto directo en el resto.</p>
         <p>Para evitar inconvenientes y malos entendidos <strong>decidimos crear esta suerte de guía rápida que enumera recomendaciones, consejos, sugerencias y algún que otro pedido puntual</strong>, esperando optimizar un curso de acción que debería funcionar de manera aceitada asegurando eficiencia en el desempeño y buenos resultados.</p>
         <p>No obstante, no es la intención de esta guía delimitar formas de actuar, ni tampoco moldear comportamientos.</p>
         <figure><img src="images/illus-clippy.png" width="150" alt=""></figure>
         <p><strong>Queremos que quede claro que podés trabajar de la manera que te resulte más práctica y útil</strong>. Nos interesa que te sientas cómodo porque sos una parte importante de nuestro equipo de trabajo y sabemos que tu aporte es sumamente valioso. Sin embargo, sea cual sea la forma en que elijas desempeñar tus actividades, vamos a necesitar que no pases por alto ciertas pautas. Simplemente con eso, nos estarás ayudando de manera significativa a mantener (e inclusive hacer crecer) el prestigio con esfuerzo ya consolidado.</p>
-  		</article>
-  	</section>
+      </article>
+    </section>
 
     <section id="diseno">
       <header>
@@ -251,18 +251,30 @@
         <p>Uno siempre termina usando un hack para resolver alguna issue de compatibilidad. Si usás uno de estos (ya sea en CSS o JS), dejá un mínimo comentario explicando por qué se terminó usando eso para que la solución tenga un contexto.</p>
 
         <p class="note">Por ende, llegamos a la lista de cosas que conviene hacer como parte del proyecto:</p>
+
         <h5>Documentá todas las especificaciones</h5>
         <p>Esto viene del primer punto y consiste en responder todas esas preguntas (y las que surjan aparte) documentadas en un Text Document en <a href="#">Basecamp</a>. Tenelo como referencia ante cualquier duda y si hay una consulta, efectuala por <a href="#">Basecamp</a> (con copia al <strong>Project Manager</strong> / <strong>CTO</strong> / <strong>Lead Developer</strong>) para que quede guardada tanto la pregunta como la respuesta del cliente.</p>
+
         <h5>Seguí buenas prácticas de código</h5>
-        <p>Básicamente, sé prolijo y no hagas grasadas salvo que tengas un muy buen motivo (y si lo hacés, comentalo apropiadamente para que se entienda durante la intervención).</p>
+        <p>Básicamente, sé prolijo y no hagas grasadas salvo que tengas un muy buen motivo (y si lo hacés, comentalo apropiadamente para que se entienda durante la intervención). Recordá que <strong>nuestro idioma oficial es el inglés</strong>, así que seguí esa guideline salvo que se indique lo contrario en el brief.</p>
+
         <h5>Evitá las entregas parciales</h5>
         <p>Usualmente los clientes asumen que lo que obtienen es una representación clara del trabajo final, y entregar cosas a medias no queda bien (termina en listas interminables de feedback que se responden con “todavía no está hecho”). Sólo entregá cosas finales y aprobadas, y si tenés que hacer una entrega parcial de todos modos, definí con mucha precisión qué cosas están listas para que sólo se evalúe eso.</p>
+
         <h5>Pedí la opinión de otro dev</h5>
         <p>A uno siempre se le escapan cosas o termina haciendo cosas por impulso. Siempre está bueno consultar con otra persona cada tanto para que le pegue un vistazo al trabajo a medida que va avanzando. Es algo que sólo lleva unos minutos y eleva notablemente la calidad del trabajo final, ya que terminás tomando experiencia prestada de alguien que por ahí ya se topó con el mismo problema antes.</p>
-        <h5>Siempre una revisión antes de un entregable</h5>
-        <p>Esto es parte de nuestro proceso y siempre se tiene que respetar salvo que haya una excepción muy clara a la revisión. Siempre antes de enviar un entregable a un cliente (maquetado, site, etc) y con una anticipación de un día o dos, pedí una revisión formal del <strong>Project Manager</strong>, <strong>CTO</strong>, <strong>Lead Developer</strong> o quien corresponda para asegurarte de que no se haya escapado nada y esté todo impecable antes de entregarlo.</p>
-        </ul>
 
+        <h5>Usá Git Flow</h5>
+        <p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">Git Flow</a> es una metodología que nos permite trabajar con mayor comodidad en un repositorio. Dale una leída al documento, pero lo que tenés que saber es lo siguiente: Usá siempre branches para nuevas features y fixes (feature/redesign), los cuales se mergean a dev para testearlos y recién una vez testeados los mandamos a master.</p>
+
+        <h5>Pull Requests are your friend</h5>
+        <p>Usamos Pull Requests para pedir una <strong>revisión de código antes de dar por finalizada una feature</strong>. De esta forma damos lugar a que el tech lead del proyecto pueda asegurar que se están cumpliendo nuestros estándares de calidad, al igual que nos otorga un segundo punto de vista para detectar problemas con el código.</p>
+        <p>Asimismo, en features complejas es conveniente que el resto del equipo se sume para testear y dar insights valiosos, los cuales pueden discutirse y corregirse antes de terminar cada objetivo.</p>
+
+        <h5>Navegadores y Sistemas Operativos Soportados</h5>
+        <p>En desktop, como política general <strong>soportamos las dos últimas versiones estables</strong> de los browsers principales (Chrome, Firefox, IE, Safari). Asimismo, todos nuestros sites son <strong>responsive con soporte mobile</strong> por defecto.</p>
+        <p>En mobile, dada la mayor variación y disponibilidad de hardware, tomamos como base los dispositivos de referencia de iOS y Android, que son los <strong>iPhone y Nexus disponibles comercialmente durante los últimos 12 meses</strong>, incluyendo sus sistemas operativos. Esto significa iPhone 5/6/6Plus (iOS 7 y 8) y Nexus 5/6 (Android 4.4 y 5).</p>
+        <p>Estos estándares son una guía general y deben evaluarse por proyecto para garantizar un excelente resultado final. Recordá que no podemos ofrecer una excelente UX si la mayoría de usuarios no puede usar el sitio/app.</p>
       </article>
     </section>
 
